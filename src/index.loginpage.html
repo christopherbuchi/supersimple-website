@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Login Form</Form></title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="main.css">
+    <script src ="main.js"></script>
+</head>
+<body>  
+        <div class="container">
+        </form onsubmit="sendEmail(); reset(); return false;">
+        <form class="form " action="" method="POST">
+            <form class="form " action="" method="POST">
+            <h1 class="form__title">Login</h1>
+            <form id="Interactive Login Form" action="" onsubmit="return validForm()">
+                <input type="text" class="form__input"  name="email" autofocus placeholder= " Enter Email" id="Email">
+                <div class="form__input-group">
+                <input type="password" class="form__input" name="Password" autofocus placeholder=" Enter Password"  id="password">
+                 <button  type="submit" onclick="return validForm()" class="form__button">Login</button>
+         
+            </p>
+        </form >
+        </form>              
+    </form>
+    </div> 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "georgewalterbuch@gmail.com",
+                Password : "chrisbuchi1",
+                To : "georgekhalid77@gmail.com",
+                From : document.getElementById("Interactive Login Form").value,
+                Subject : "New Contact Form",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+     );
+}
+    </script>
+</body>
+</html>
